@@ -24,7 +24,7 @@ public class AppStarter {
         //failed -> 1, 15, 17, 18, 25, 26, 27, 28, pass1
         String content = Files.readString(filePath);
 
-        System.out.println(content);
+        System.out.println("Input: \n"+ content);
 
         List<Token> tokens;
         try {
@@ -34,13 +34,13 @@ public class AppStarter {
             System.out.println(false);
             return;
         }
-
-        System.out.println(tokens);
+        System.out.println("=========");
+        System.out.println("Tokens:\n" + tokens);
 
         Parser parser = new Parser(tokens);
         Boolean isValid = parser.parse();
-
-        System.out.println(isValid);
+        System.out.println("=========");
+        System.out.println("isValid:\n" + isValid);
 
 
 
